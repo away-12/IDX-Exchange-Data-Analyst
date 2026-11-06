@@ -2,16 +2,11 @@ import pandas as pd
 from pathlib import Path
 
 
-# -----------------------------------------
-# FIND IDX FOLDER
-# -----------------------------------------
+
 
 folder = Path(__file__).resolve().parent
 
 
-# -----------------------------------------
-# LOAD CLEANED DATASETS FROM WEEKS 4-5
-# -----------------------------------------
 
 listings = pd.read_csv(
     folder / "listings_cleaned_analysis_ready.csv",
@@ -24,9 +19,6 @@ sold = pd.read_csv(
 )
 
 
-# -----------------------------------------
-# CHECK THAT FILES LOADED
-# -----------------------------------------
 
 print("\n==============================")
 print("WEEK 6 - STEP 1")
@@ -531,6 +523,3 @@ print("listings_week6_engineered.csv")
 print("week6_county_summary.csv")
 
 
-print("\n==============================")
-print("WEEK 6 COMPLETE!")
-print("==============================")
