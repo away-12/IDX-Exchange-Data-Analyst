@@ -3,16 +3,11 @@ from pathlib import Path
 import re
 
 
-# -----------------------------------------
-# FIND IDX FOLDER
-# -----------------------------------------
-
 folder = Path(__file__).resolve().parent
 
 
-# -----------------------------------------
+
 # LOAD YOUR WEEK 1 FINAL FILES
-# -----------------------------------------
 
 listings = pd.read_csv(
     folder / "combined_listings_residential.csv",
@@ -25,9 +20,6 @@ sold = pd.read_csv(
 )
 
 
-# -----------------------------------------
-# CHECK DATASET SIZE
-# -----------------------------------------
 
 print("\n==============================")
 print("LISTINGS DATASET")
