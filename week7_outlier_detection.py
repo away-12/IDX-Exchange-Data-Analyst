@@ -2,10 +2,6 @@ import pandas as pd
 from pathlib import Path
 
 
-# -----------------------------------------
-# FIND IDX FOLDER
-# -----------------------------------------
-
 folder = Path(__file__).resolve().parent
 
 
