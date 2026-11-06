@@ -3,10 +3,6 @@ from pathlib import Path
 import re
 
 
-# --------------------------------------------------
-# 1. FIND THE IDX FOLDER
-# --------------------------------------------------
-
 # This Python file should be saved inside your IDX folder
 folder = Path(__file__).resolve().parent
 
@@ -26,9 +22,6 @@ expected_months = [
 ]
 
 
-# --------------------------------------------------
-# 3. FIND ONE FILE FOR EACH MONTH
-# --------------------------------------------------
 
 def get_monthly_files(prefix):
 
@@ -92,9 +85,6 @@ def get_monthly_files(prefix):
     ]
 
 
-# --------------------------------------------------
-# 4. COMBINE AND FILTER DATA
-# --------------------------------------------------
 
 def combine_files(prefix, output_name):
 
@@ -111,9 +101,7 @@ def combine_files(prefix, output_name):
     total_rows_before_concat = 0
 
 
-    # --------------------------------------------------
-    # READ EVERY MONTH
-    # --------------------------------------------------
+
 
     for file in files:
 
@@ -129,9 +117,7 @@ def combine_files(prefix, output_name):
         dataframes.append(df)
 
 
-    # --------------------------------------------------
-    # 5. CONCATENATE ALL MONTHS
-    # --------------------------------------------------
+
 
     combined = pd.concat(
         dataframes,
@@ -196,9 +182,7 @@ def combine_files(prefix, output_name):
     )
 
 
-    # --------------------------------------------------
-    # 7. SAVE FINAL CSV
-    # --------------------------------------------------
+
 
     output_path = folder / output_name
 
@@ -233,10 +217,5 @@ combine_files(
 )
 
 
-# --------------------------------------------------
-# 10. FINISHED
-# --------------------------------------------------
 
-print("\n======================================")
 print("WEEK 1 COMPLETE!")
-print("======================================")
