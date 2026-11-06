@@ -4,9 +4,7 @@ import subprocess
 import sys
 
 
-# --------------------------------------------------
 # LOCATION OF YOUR IDX FOLDER
-# --------------------------------------------------
 
 folder = Path(__file__).resolve().parent
 
@@ -124,9 +122,7 @@ def run_sold_month(month, next_month, yyyymm):
     print(f"FINISHED SOLD {yyyymm}")
 
 
-# --------------------------------------------------
-# DOWNLOAD ALL FOUR LISTING MONTHS
-# --------------------------------------------------
+
 
 print("\n\n##############################################")
 print("STARTING LISTING DOWNLOADS")
@@ -140,9 +136,7 @@ for month, next_month, yyyymm in months:
     )
 
 
-# --------------------------------------------------
-# DOWNLOAD ALL FOUR SOLD MONTHS
-# --------------------------------------------------
+
 
 print("\n\n##############################################")
 print("STARTING SOLD DOWNLOADS")
@@ -156,9 +150,6 @@ for month, next_month, yyyymm in months:
     )
 
 
-# --------------------------------------------------
-# FINISHED
-# --------------------------------------------------
 
 print("\n\n==============================================")
 print("ALL MISSING MONTHS DOWNLOADED!")
@@ -177,5 +168,3 @@ print("CRMLSSold202605.csv")
 print("CRMLSSold202606.csv")
 print("CRMLSSold202607.csv")
 print("CRMLSSold202608.csv")
-
-print("\nYou should now have 32 Listing months and 32 Sold months.")
